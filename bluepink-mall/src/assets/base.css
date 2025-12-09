@@ -3,22 +3,21 @@
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
-
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --vt-c-black: #0d0f16;
+  --vt-c-black-soft: #141926;
+  --vt-c-black-mute: #1c2333;
 
   --vt-c-indigo: #2c3e50;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-divider-dark-1: rgba(126, 139, 163, 0.6);
+  --vt-c-divider-dark-2: rgba(126, 139, 163, 0.35);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-light-1: #1f2a44;
+  --vt-c-text-light-2: rgba(31, 42, 68, 0.7);
+  --vt-c-text-dark-1: #f5f7ff;
+  --vt-c-text-dark-2: rgba(245, 247, 255, 0.72);
 }
 
 /* semantic color variables for this project */
@@ -26,6 +25,8 @@
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
+  --color-surface: #ffffff;
+  --color-surface-muted: #f6f7fb;
 
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
@@ -33,20 +34,47 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --section-gap: 160px;
+  --accent: #6b7bff;
+  --accent-2: #ff76b8;
+  --shadow-soft: 0 10px 40px rgba(73, 90, 255, 0.12);
+  --shadow-card: 0 10px 35px rgba(15, 23, 42, 0.08);
+
+  --section-gap: 120px;
+}
+
+:root[data-theme='dark'] {
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+  --color-surface: #171c2b;
+  --color-surface-muted: #111526;
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+
+  --shadow-soft: 0 12px 45px rgba(12, 16, 31, 0.55);
+  --shadow-card: 0 10px 35px rgba(4, 6, 12, 0.55);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
+    --color-surface: #171c2b;
+    --color-surface-muted: #111526;
 
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --shadow-soft: 0 12px 45px rgba(12, 16, 31, 0.55);
+    --shadow-card: 0 10px 35px rgba(4, 6, 12, 0.55);
   }
 }
 
