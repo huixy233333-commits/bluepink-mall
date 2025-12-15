@@ -1,5 +1,8 @@
 @import './base.css';
 
+/* ArcGIS Maps SDK CSS - 按照官方文档推荐方式导入 */
+@import '@arcgis/core/assets/esri/themes/light/main.css';
+
 #app {
   max-width: 1200px;
   margin: 0 auto;

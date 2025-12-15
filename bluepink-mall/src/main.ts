@@ -1,4 +1,5 @@
 import './assets/main.css'
+import './config/arcgis' // 初始化 ArcGIS 配置
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

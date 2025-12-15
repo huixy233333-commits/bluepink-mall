@@ -20,7 +20,13 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "@arcgis/core": "^4.34.8",
+    "@babylonjs/core": "^8.41.1",
+    "@faker-js/faker": "^10.1.0",
+    "chart.js": "^4.5.1",
+    "echarts": "^6.0.0",
     "pinia": "^3.0.4",
+    "three": "^0.182.0",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },

@@ -13,6 +13,15 @@ const demoPages = [
   { label: '口碑案例', path: '/testimonials' },
   { label: 'FAQ / 支持', path: '/faq' },
   { label: '组件演示', path: '/components' },
+  { label: 'ECharts 图表', path: '/echarts' },
+]
+
+const mapPages = [
+  { label: '2D 地图', path: '/map-2d' },
+  { label: '3D 地图', path: '/map-3d' },
+  { label: 'Three.js 演示', path: '/map-three' },
+  { label: '3D 场景查询', path: '/map-3d-query' },
+  { label: '基础地图', path: '/start-map' }
 ]
 
 let mediaQuery: MediaQueryList | null = null
@@ -32,6 +41,7 @@ const activeClass = (path: string) => (route.path === path ? 'active' : '')
 
 const themeLabel = computed(() => (theme.value === 'light' ? '🌙 深色' : '☀️ 浅色'))
 const isDemoActive = computed(() => demoPages.some((page) => route.path.startsWith(page.path)))
+const isMapActive = computed(() => mapPages.some((page) => route.path.startsWith(page.path)))
 
 onMounted(() => {
   mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -77,6 +87,19 @@ onBeforeUnmount(() => {
           <div class="menu">
             <RouterLink
               v-for="item in demoPages"
+              :key="item.path"
+              :to="item.path"
+              :class="activeClass(item.path)"
+            >
+              {{ item.label }}
+            </RouterLink>
+          </div>
+        </div>
+        <div class="dropdown" :class="{ active: isMapActive }">
+          <span class="trigger">地图演示</span>
+          <div class="menu">
+            <RouterLink
+              v-for="item in mapPages"
               :key="item.path"
               :to="item.path"
               :class="activeClass(item.path)"

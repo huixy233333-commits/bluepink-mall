@@ -7,6 +7,12 @@ import PricingDemo from '../views/PricingDemo.vue'
 import TestimonialsDemo from '../views/TestimonialsDemo.vue'
 import FaqDemo from '../views/FaqDemo.vue'
 import ComponentsDemo from '../views/ComponentsDemo.vue'
+import Map2D from '../views/Map2D.vue'
+import Map3D from '../views/Map3D.vue'
+import MapThree from '../views/MapThree.vue'
+import SceneQueryDemo from '../views/SceneQueryDemo.vue'
+import EChartsDemo from '../views/EChartsDemo.vue'
+import EChartsConfig from '../views/EChartsConfig.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +56,36 @@ const router = createRouter({
       path: '/components',
       name: 'components',
       component: ComponentsDemo,
+    },
+    {
+      path: '/echarts',
+      name: 'echarts',
+      component: EChartsDemo,
+    },
+    {
+      path: '/echarts-config',
+      name: 'echarts-config',
+      component: EChartsConfig,
+    },
+    {
+      path: '/map-2d',
+      name: 'map-2d',
+      component: Map2D,
+    },
+    {
+      path: '/map-3d',
+      name: 'map-3d',
+      component: Map3D,
+    },
+    {
+      path: '/map-three',
+      name: 'map-three',
+      component: MapThree,
+    },
+    {
+      path: '/map-3d-query',
+      name: 'map-3d-query',
+      component: SceneQueryDemo,
     },
     {
       path: '/about',
